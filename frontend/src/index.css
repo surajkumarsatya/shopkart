@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+*::before,
+*::after {
+  box-sizing: border-box; /* The most important reset */
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%; /* Ensure both take full height, useful for flexbox/grid layouts */
+  width: 100%;
+  line-height: 1.5; /* Good default for readability */
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+
+
+
