@@ -2,7 +2,7 @@ import { useState, type JSX } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Heart, Search, ShoppingCart } from "lucide-react";
-import { IoIosArrowDown, IoIosArrowDropleft, IoIosArrowDropright, IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 
 import {
   Select,
@@ -66,7 +66,7 @@ export function Header(): JSX.Element {
   if (isError) return <div>An error has occurred: {error?.message}</div>;
 
   return (
-    <nav className="p-5">
+    <nav className="max-w-[1440px] px-10 mx-auto py-5">
       {/* header row */}
       <div className="flex items-center justify-between">
         <div>
@@ -130,7 +130,7 @@ export function Header(): JSX.Element {
         </Select>
         </div>
 
-        <div className="text-2xl px-5"><IoIosArrowDropleft /></div>
+        {/* <div className="text-2xl px-5"><IoIosArrowDropleft /></div> */}
 
         {/* top-level menu items + their submenu (only render submenu for active item) */}
         <div className="flex flex-nowrap items-center gap-3 ">
@@ -182,7 +182,7 @@ export function Header(): JSX.Element {
           })}
         </div>
 
-        <div className="text-2xl pl-5"><IoIosArrowDropright /></div>
+        {/* <div className="text-2xl pl-5"><IoIosArrowDropright /></div> */}
       </div>
     </nav>
   );
